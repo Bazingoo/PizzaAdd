@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <title>Зроби піцу сам</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="style/IndexStyle.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="image/icon.png" alt="logo" style="width:45px;">
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="shares.html">Акції</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="products.html">Товари</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="shops.html">Обрати магазин</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="enterform.html">Реєстрація</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pizza.html">Зроби піцу сам</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h5>Конструктор піци</h5>
+
+    <form id="formAddpizza">
+        <div class="mb-3">
+            <label for="pizzaid" class="form-label">Номер:</label>
+            <input type="number" class="form-control" id="pizzaid">
+        </div>
+        <div class="mb-3">
+            <label for="dough" class="form-label">Тісто:</label>
+            <input type="text" class="form-control" id="doug">
+        </div>
+        <div class="mb-3">
+            <label for="sauce" class="form-label">Соус:</label>
+            <input type="text" class="form-control" id="sauce">
+        </div>
+        <div class="mb-3">
+            <label for="cheese" class="form-label">Сир:</label>
+            <input type="text" class="form-control" id="cheese">
+        </div>
+        <div class="mb-3">
+            <label for="meat" class="form-label">М'ясо</label>
+            <input type="text" class="form-control" id="meat">
+        </div>
+        <div class="mb-3">
+            <label for="vegetables e" class="form-label">Овочі</label>
+            <input type="text" class="form-control" id="vegetables">
+        </div>
+        <button type="submit" class="btn btn-primary">Скласти</button>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Тісто</th>
+                <th scope="col">Соус</th>
+                <th scope="col">Сири</th>
+                <th scope="col">М'ясо</th>
+                <th scope="col">Овочі</th>
+            </tr>
+        </thead>
+        <tbody id="bodyPizza">
+            <tr>
+                <th scope="row">1</th>
+                <td>Біле</td>
+                <td>Томатний</td>
+                <td>Пармезан</td>
+                <td>Шинка</td>
+                <td>Помідори</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <span id="loading">loading ... </span>
+
+    <script src="js/addpizza.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/axios/axios.min.js"></script>
+</body>
+</html>
